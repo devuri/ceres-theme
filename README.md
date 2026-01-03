@@ -1,83 +1,136 @@
-# Editor Restrictions Jekyll Theme
+# ER Theme for Jekyll / GitHub Pages
 
-A simple Jekyll theme for GitHub Pages based on the EDD success page design.
+A clean, minimal Jekyll theme you can use across multiple GitHub Pages projects.
 
-## Quick Setup for GitHub Pages
+## Usage
 
-### Option 1: Direct Upload
-1. Create a new repository on GitHub (e.g., `my-site`)
-2. Upload all these files to the repository
-3. Go to **Settings → Pages**
-4. Under "Source", select **Deploy from a branch**
-5. Choose `main` branch and `/ (root)` folder
-6. Click **Save**
-7. Your site will be live at `https://yourusername.github.io/my-site/`
+### Step 1: Create the Theme Repo
 
-### Option 2: Using Git
-```bash
-# Clone your new empty GitHub repo
-git clone https://github.com/yourusername/my-site.git
-cd my-site
+1. Create a new **public** GitHub repo named `er-theme` (or whatever you want)
+2. Upload all these files to that repo
+3. That's it — no GitHub Pages needed for the theme repo itself
 
-# Copy the theme files into this folder
-# Then push to GitHub
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
+### Step 2: Use in Any Project
 
-## File Structure
-```
-├── _config.yml          # Site configuration
-├── _layouts/
-│   └── default.html     # Main HTML template
-├── assets/
-│   └── css/
-│       └── style.css    # All styles
-├── index.html           # Main page content
-└── README.md            # This file
-```
+In your project's `_config.yml`, add:
 
-## Customization
-
-### Change Site Title
-Edit `_config.yml`:
 ```yaml
-title: Your Site Name
-description: Your description
+remote_theme: YOURUSERNAME/er-theme
+
+title: Your Project Name
+description: Your project description
+
+# Optional - customize header
+header_link:
+  text: "My Account"
+  url: "/account"
+  icon: "person-circle"
+
+# Optional - customize footer
+footer_links:
+  - text: "Terms"
+    url: "/terms"
+  - text: "Privacy"
+    url: "/privacy"
+  - text: "Support"
+    url: "/support"
+
+footer_text: "© 2026 Your Company. All rights reserved."
 ```
 
-### Edit Content
-Modify `index.html` to change the page content. It uses simple HTML with the layout defined in `_layouts/default.html`.
+### Step 3: Create Your Pages
 
-### Change Colors
-Edit the CSS variables at the top of `assets/css/style.css`:
-```css
-:root {
-    --er-accent: #6366f1;      /* Main accent color */
-    --er-success: #10b981;     /* Success/green color */
-    /* ... other colors */
-}
-```
+Create an `index.md` or `index.html`:
 
-## Adding More Pages
-
-Create a new `.html` or `.md` file in the root:
-
-```html
+```markdown
 ---
-layout: default
-title: About
+layout: page
+title: Home
 ---
 
-<div class="success-container">
-    <h1>About Us</h1>
-    <p>Your content here...</p>
+<div class="hero">
+    <div class="hero-icon">
+        <i class="bi bi-check-lg"></i>
+    </div>
+    <h1>Welcome!</h1>
+    <p>Your content here.</p>
+</div>
+
+<div class="card">
+    <h2>
+        <span class="card-icon"><i class="bi bi-star"></i></span>
+        Section Title
+    </h2>
+    <p>Your card content...</p>
 </div>
 ```
 
-## Notes
+## Switching from Slate
 
-- No build step required - GitHub Pages handles Jekyll automatically
-- The theme uses Google Fonts (Space Grotesk, JetBrains Mono) and Bootstrap Icons via CDN
-- Fully responsive design included
+In your existing repo using Slate:
+
+1. Open `_config.yml`
+2. Remove: `theme: jekyll-theme-slate` or `remote_theme: pages-themes/slate`
+3. Add: `remote_theme: YOURUSERNAME/er-theme`
+4. Update your markdown/html to use the new CSS classes
+5. Commit and push
+
+## Available CSS Classes
+
+### Layout
+- `.page-content` - Main content wrapper (720px max)
+- `.container` - General container (1200px max)
+
+### Components
+- `.card` - White card with border
+- `.card-icon` - Icon box for card headers
+- `.hero` - Centered hero section
+- `.hero-icon` - Large icon circle
+
+### Buttons
+- `.btn` - Base button
+- `.btn-primary` - Purple filled button
+- `.btn-secondary` - Ghost/outline button
+
+### Lists & Details
+- `.detail-row` - Label/value row
+- `.steps-list` - Numbered steps with counter
+- `.step-content` - Content inside step
+
+### Utilities
+- `.license-box` - Code/key display box
+- `.copy-btn` - Copy button
+- `.download-item` - Download file row
+- `.help-box` - Help/support callout
+- `.note` - Small info note
+- `.mono` - Monospace font
+
+### Progress (optional)
+- `.progress-steps` - Step indicator bar
+- `.step` / `.step.active` / `.step.completed`
+- `.step-connector` / `.step-connector.completed`
+
+## Icons
+
+Uses [Bootstrap Icons](https://icons.getbootstrap.com/). Example:
+```html
+<i class="bi bi-download"></i>
+<i class="bi bi-check-lg"></i>
+<i class="bi bi-key"></i>
+```
+
+## Customizing Colors
+
+Override in your project by creating `assets/css/custom.css`:
+
+```css
+:root {
+    --er-accent: #your-color;
+    --er-accent-dark: #your-darker-color;
+}
+```
+
+Then in `_config.yml`:
+```yaml
+custom_css: /assets/css/custom.css
+```

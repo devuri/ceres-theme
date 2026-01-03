@@ -1,0 +1,14 @@
+<header class="site-header">
+    <div class="container">
+        <a href="{{ '/' | relative_url }}" class="logo">
+            <span class="dot"></span>
+            {{ site.title | default: "My Site" }}
+        </a>
+        {% if site.header_link %}
+        <a href="{{ site.header_link.url }}" class="header-link">
+            <i class="bi bi-{{ site.header_link.icon | default: 'person-circle' }}"></i>
+            {{ site.header_link.text | default: "My Account" }}
+        </a>
+        {% endif %}
+    </div>
+</header>

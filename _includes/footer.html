@@ -1,0 +1,12 @@
+<footer class="site-footer">
+    <div class="container">
+        {% if site.footer_links %}
+        <div class="footer-links">
+            {% for link in site.footer_links %}
+            <a href="{{ link.url }}">{{ link.text }}</a>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <p>{{ site.footer_text | default: "&copy; " | append: site.time | date: "%Y" | append: " All rights reserved." }}</p>
+    </div>
+</footer>
