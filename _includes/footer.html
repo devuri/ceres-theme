@@ -1,0 +1,40 @@
+<footer class="site-footer">
+    <div class="container">
+        {% if site.footer_columns %}
+        <div class="footer-grid">
+            <div>
+                <div class="footer-brand">
+                    <span class="dot"></span>
+                    {{ site.title | default: "Site Title" }}
+                </div>
+                <p class="footer-desc">{{ site.footer_tagline | default: site.description }}</p>
+            </div>
+            
+            {% for column in site.footer_columns %}
+            <div>
+                <div class="footer-title">{{ column.title }}</div>
+                <ul class="footer-links">
+                    {% for link in column.links %}
+                    <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        
+        <div class="footer-bottom">
+            <p>{{ site.footer_copyright | default: "&copy; " | append: site.time | date: "%Y" | append: " " | append: site.title | append: ". All rights reserved." }}</p>
+            
+            {% if site.social_links %}
+            <div class="footer-socials">
+                {% for social in site.social_links %}
+                <a href="{{ social.url }}" aria-label="{{ social.platform }}">
+                    <i class="bi bi-{{ social.icon }}"></i>
+                </a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,35 @@
+{% comment %}
+CTA Section Include
+
+Usage:
+{% include cta.html
+   title="Ready to get started?"
+   description="Your CTA description here"
+   cta_primary="Get Started"
+   cta_primary_url="#"
+   cta_secondary="Learn More"
+   cta_secondary_url="/docs"
+%}
+{% endcomment %}
+
+<section class="cta-section">
+    <div class="container">
+        <h2>{{ include.title }}</h2>
+        <p>{{ include.description }}</p>
+        
+        <div class="cta-actions">
+            {% if include.cta_primary %}
+            <a href="{{ include.cta_primary_url | default: '#' }}" class="btn btn-glow btn-lg">
+                {% if include.cta_primary_icon %}<i class="bi bi-{{ include.cta_primary_icon }}"></i>{% endif %}
+                {{ include.cta_primary }}
+            </a>
+            {% endif %}
+            {% if include.cta_secondary %}
+            <a href="{{ include.cta_secondary_url | default: '#' }}" class="btn btn-ghost btn-lg">
+                {% if include.cta_secondary_icon %}<i class="bi bi-{{ include.cta_secondary_icon }}"></i>{% endif %}
+                {{ include.cta_secondary }}
+            </a>
+            {% endif %}
+        </div>
+    </div>
+</section>

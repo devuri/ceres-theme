@@ -1,0 +1,30 @@
+{% comment %}
+Bento Card Include
+
+Usage:
+{% include bento-card.html
+   icon="shield-check"
+   title="Card Title"
+   description="Card description text"
+   large=true
+%}
+{% endcomment %}
+
+<div class="bento-card {% if include.large %}large{% endif %}">
+    {% if include.icon %}
+    <div class="bento-icon">
+        <i class="bi bi-{{ include.icon }}"></i>
+    </div>
+    {% endif %}
+    
+    <h3>{{ include.title }}</h3>
+    <p>{{ include.description }}</p>
+    
+    {% if include.visual_icon %}
+    <div class="bento-visual">
+        <i class="bi bi-{{ include.visual_icon }}"></i>
+    </div>
+    {% endif %}
+    
+    {{ include.content }}
+</div>

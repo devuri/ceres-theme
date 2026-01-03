@@ -1,0 +1,62 @@
+{% comment %}
+Hero Section Include
+
+Usage:
+{% include hero.html
+   tag="WordPress Plugin"
+   title="Take control of your <span class='gradient'>Block Editor</span>"
+   description="Your description here"
+   cta_primary="Get Started"
+   cta_primary_url="#pricing"
+   cta_secondary="View Docs"
+   cta_secondary_url="/docs"
+   stats=page.hero_stats
+%}
+{% endcomment %}
+
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    {% if include.tag %}
+                    <div class="hero-tag">{{ include.tag }}</div>
+                    {% endif %}
+                    
+                    <h1>{{ include.title }}</h1>
+                    
+                    {% if include.description %}
+                    <p>{{ include.description }}</p>
+                    {% endif %}
+                    
+                    <div class="hero-actions">
+                        {% if include.cta_primary %}
+                        <a href="{{ include.cta_primary_url | default: '#' }}" class="btn btn-glow btn-lg">
+                            {{ include.cta_primary }}
+                        </a>
+                        {% endif %}
+                        {% if include.cta_secondary %}
+                        <a href="{{ include.cta_secondary_url | default: '#' }}" class="btn btn-ghost btn-lg">
+                            {{ include.cta_secondary }}
+                        </a>
+                        {% endif %}
+                    </div>
+                    
+                    {% if include.stats %}
+                    <div class="hero-stats">
+                        {% for stat in include.stats %}
+                        <div class="stat-item">
+                            <div class="stat-value">{{ stat.value }}</div>
+                            <div class="stat-label">{{ stat.label }}</div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                {{ include.content }}
+            </div>
+        </div>
+    </div>
+</section>

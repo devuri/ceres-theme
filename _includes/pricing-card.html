@@ -1,0 +1,39 @@
+{% comment %}
+Pricing Card Include
+
+Usage:
+{% include pricing-card.html
+   name="Pro"
+   sites="5 site license"
+   price="$79"
+   period="per year"
+   features=page.pricing_features
+   featured=true
+   popular=true
+   button_text="Get Pro"
+   button_url="#"
+%}
+{% endcomment %}
+
+<div class="pricing-card {% if include.featured %}featured{% endif %}">
+    {% if include.popular %}
+    <div class="popular-badge">Most Popular</div>
+    {% endif %}
+    
+    <div class="pricing-name">{{ include.name }}</div>
+    <div class="pricing-sites">{{ include.sites }}</div>
+    <div class="pricing-amount">{{ include.price }}</div>
+    <div class="pricing-period">{{ include.period }}</div>
+    
+    {% if include.features %}
+    <ul class="pricing-features">
+        {% for feature in include.features %}
+        <li><i class="bi bi-check-circle-fill"></i> {{ feature }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    
+    <a href="{{ include.button_url | default: '#' }}" class="btn {% if include.featured %}btn-glow{% else %}btn-ghost{% endif %} w-100">
+        {{ include.button_text | default: "Get Started" }}
+    </a>
+</div>

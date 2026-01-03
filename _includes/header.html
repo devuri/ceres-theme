@@ -1,0 +1,25 @@
+<header class="navbar">
+    <div class="container">
+        <a href="{{ '/' | relative_url }}" class="navbar-brand">
+            <span class="dot"></span>
+            {{ site.title | default: "Site Title" }}
+        </a>
+        
+        {% if site.navigation %}
+        <nav>
+            <ul class="nav-links">
+                {% for item in site.navigation %}
+                <li>
+                    <a href="{{ item.url | relative_url }}" class="nav-link">{{ item.title }}</a>
+                </li>
+                {% endfor %}
+                {% if site.cta_button %}
+                <li>
+                    <a href="{{ site.cta_button.url | relative_url }}" class="btn btn-glow">{{ site.cta_button.title }}</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        {% endif %}
+    </div>
+</header>
