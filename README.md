@@ -91,7 +91,7 @@ title: Home
 
 1. Open your `_config.yml`
 2. Remove: `theme: jekyll-theme-slate` or `remote_theme: pages-themes/slate`
-3. Add: `remote_theme: YOUR_USERNAME/ceres-theme`
+3. Add: `remote_theme: devuri/ceres-theme`
 4. Update your pages to use the new layouts and CSS classes
 5. Commit and push
 
