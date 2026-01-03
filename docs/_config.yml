@@ -1,0 +1,21 @@
+remote_theme: devuri/ceres-theme
+
+title: Ceres Theme
+description: A clean, modern Jekyll theme for GitHub Pages.
+
+# Navigation
+navigation:
+  - title: Features
+    url: "#features"
+  - title: Docs
+    url: /docs
+
+
+# Social links
+social_links:
+  - platform: GitHub
+    icon: github
+    url: https://github.com/devuri/ceres-theme
+
+# Footer
+footer_copyright: "© 2026 Uriel Wilson. All rights reserved."      
