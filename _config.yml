@@ -1,8 +1,0 @@
-# Site settings
-title: Editor Restrictions
-description: Purchase Complete
-baseurl: "" # subpath if hosting at username.github.io/repo-name
-url: "" # your GitHub Pages URL
-
-# Build settings
-markdown: kramdown
