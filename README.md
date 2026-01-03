@@ -13,7 +13,7 @@ Create a **public** GitHub repository (e.g., `ceres-theme`) and upload all these
 In your project's `_config.yml`:
 
 ```yaml
-remote_theme: YOUR_USERNAME/ceres-theme
+remote_theme: devuri/ceres-theme
 
 # Site settings
 title: My Site
