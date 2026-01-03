@@ -15,7 +15,7 @@ A clean, minimal Jekyll theme you can use across multiple GitHub Pages projects.
 In your project's `_config.yml`, add:
 
 ```yaml
-remote_theme: YOURUSERNAME/er-theme
+remote_theme: devuri//esl-theme
 
 title: Your Project Name
 description: Your project description
