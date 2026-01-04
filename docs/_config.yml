@@ -1,8 +1,8 @@
 # Site settings
 title: Ceres Theme
 description: A clean, modern Jekyll theme for GitHub Pages
-url: ""
-baseurl: ""
+url: "https://github.com/devuri/ceres-theme"
+baseurl: "https://github.com/devuri/ceres-theme"
 
 # Theme
 remote_theme: devuri/ceres-theme
