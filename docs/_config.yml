@@ -1,15 +1,57 @@
-remote_theme: devuri/ceres-theme
-
+# Site settings
 title: Ceres Theme
-description: A clean, modern Jekyll theme for GitHub Pages.
+description: A clean, modern Jekyll theme for GitHub Pages
+url: ""
+baseurl: ""
+
+# Theme
+remote_theme: devuri/ceres-theme
 
 # Navigation
 navigation:
-  - title: Features
-    url: "#features"
   - title: Docs
-    url: /docs
+    url: /getting-started
+  - title: Components
+    url: /components/
+  - title: Customization
+    url: /customization
+  - title: GitHub
+    url: https://github.com/devuri/ceres-theme
 
+cta_button:
+  title: Get Started
+  url: /getting-started
+
+# Footer columns
+footer_columns:
+  - title: Documentation
+    links:
+      - title: Getting Started
+        url: /getting-started
+      - title: Configuration
+        url: /configuration
+      - title: Layouts
+        url: /layouts
+      - title: Customization
+        url: /customization
+  - title: Components
+    links:
+      - title: Hero
+        url: /components/hero
+      - title: Bento Grid
+        url: /components/bento-grid
+      - title: Pricing Cards
+        url: /components/pricing
+      - title: All Components
+        url: /components/
+  - title: Resources
+    links:
+      - title: GitHub
+        url: https://github.com/devuri/ceres-theme
+      - title: Issues
+        url: https://github.com/devuri/ceres-theme/issues
+      - title: Changelog
+        url: /changelog
 
 # Social links
 social_links:
@@ -18,4 +60,24 @@ social_links:
     url: https://github.com/devuri/ceres-theme
 
 # Footer
-footer_copyright: "© 2026 Uriel Wilson. All rights reserved."      
+footer_tagline: A modern Jekyll theme for GitHub Pages.
+footer_copyright: "© 2025 Ceres Theme. MIT License."
+
+# Custom CSS for docs
+custom_css: /assets/css/docs.scss
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-remote-theme
+
+# Exclude from build
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock

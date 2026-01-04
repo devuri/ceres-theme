@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<div class="docs-wrapper">
+    <aside class="docs-sidebar">
+        <nav class="docs-nav">
+            <div class="docs-nav-section">
+                <div class="docs-nav-title">Getting Started</div>
+                <ul class="docs-nav-list">
+                    <li><a href="{{ '/getting-started' | relative_url }}" class="{% if page.url == '/getting-started' or page.url == '/getting-started/' %}active{% endif %}">Installation</a></li>
+                    <li><a href="{{ '/configuration' | relative_url }}" class="{% if page.url == '/configuration' or page.url == '/configuration/' %}active{% endif %}">Configuration</a></li>
+                    <li><a href="{{ '/layouts' | relative_url }}" class="{% if page.url == '/layouts' or page.url == '/layouts/' %}active{% endif %}">Layouts</a></li>
+                </ul>
+            </div>
+            <div class="docs-nav-section">
+                <div class="docs-nav-title">Components</div>
+                <ul class="docs-nav-list">
+                    <li><a href="{{ '/components/' | relative_url }}" class="{% if page.url == '/components/' %}active{% endif %}">Overview</a></li>
+                    <li><a href="{{ '/components/hero' | relative_url }}" class="{% if page.url contains '/components/hero' %}active{% endif %}">Hero</a></li>
+                    <li><a href="{{ '/components/bento-grid' | relative_url }}" class="{% if page.url contains '/components/bento-grid' %}active{% endif %}">Bento Grid</a></li>
+                    <li><a href="{{ '/components/steps' | relative_url }}" class="{% if page.url contains '/components/steps' %}active{% endif %}">Steps</a></li>
+                    <li><a href="{{ '/components/use-cases' | relative_url }}" class="{% if page.url contains '/components/use-cases' %}active{% endif %}">Use Cases</a></li>
+                    <li><a href="{{ '/components/pricing' | relative_url }}" class="{% if page.url contains '/components/pricing' %}active{% endif %}">Pricing</a></li>
+                    <li><a href="{{ '/components/cta' | relative_url }}" class="{% if page.url contains '/components/cta' %}active{% endif %}">CTA Section</a></li>
+                </ul>
+            </div>
+            <div class="docs-nav-section">
+                <div class="docs-nav-title">Styling</div>
+                <ul class="docs-nav-list">
+                    <li><a href="{{ '/css-reference' | relative_url }}" class="{% if page.url == '/css-reference' or page.url == '/css-reference/' %}active{% endif %}">CSS Reference</a></li>
+                    <li><a href="{{ '/customization' | relative_url }}" class="{% if page.url == '/customization' or page.url == '/customization/' %}active{% endif %}">Customization</a></li>
+                    <li><a href="{{ '/colors' | relative_url }}" class="{% if page.url == '/colors' or page.url == '/colors/' %}active{% endif %}">Colors</a></li>
+                </ul>
+            </div>
+            <div class="docs-nav-section">
+                <div class="docs-nav-title">Resources</div>
+                <ul class="docs-nav-list">
+                    <li><a href="{{ '/migration' | relative_url }}" class="{% if page.url == '/migration' or page.url == '/migration/' %}active{% endif %}">Migration Guide</a></li>
+                    <li><a href="{{ '/changelog' | relative_url }}" class="{% if page.url == '/changelog' or page.url == '/changelog/' %}active{% endif %}">Changelog</a></li>
+                </ul>
+            </div>
+        </nav>
+    </aside>
+    <main class="docs-content">
+        <article class="docs-article">
+            {% if page.title %}
+            <header class="docs-header">
+                <h1>{{ page.title }}</h1>
+                {% if page.description %}
+                <p class="docs-lead">{{ page.description }}</p>
+                {% endif %}
+            </header>
+            {% endif %}
+            {{ content }}
+        </article>
+    </main>
+</div>
