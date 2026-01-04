@@ -1,0 +1,154 @@
+---
+layout: home
+title: Ceres Theme - Modern Jekyll Theme for GitHub Pages
+---
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-tag">Jekyll Theme</div>
+            <h1>Build beautiful sites with <span class="gradient">Ceres Theme</span></h1>
+            <p>A clean, modern Jekyll theme for GitHub Pages. Features Space Grotesk typography, an indigo accent palette, and a comprehensive component library.</p>
+            <div class="hero-actions">
+                <a href="{{ '/getting-started' | relative_url }}" class="btn btn-glow btn-lg">Get Started</a>
+                <a href="https://github.com/devuri/ceres-theme" class="btn btn-ghost btn-lg">
+                    <i class="bi bi-github"></i> View on GitHub
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Layouts</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">10+</div>
+                    <div class="stat-label">Components</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">MIT</div>
+                    <div class="stat-label">License</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="features">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-number">Features</span>
+            <h2 class="section-title">Everything you need</h2>
+            <p class="section-desc" style="margin: 0 auto;">A complete design system with pre-built components for landing pages, documentation, and more.</p>
+        </div>
+        
+        <div class="bento-grid">
+            <div class="bento-card">
+                <div class="bento-icon"><i class="bi bi-palette"></i></div>
+                <h3>Modern Design</h3>
+                <p>Clean layouts with gradient accents, professional typography, and thoughtful spacing.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon"><i class="bi bi-phone"></i></div>
+                <h3>Fully Responsive</h3>
+                <p>Mobile-first design that looks great on phones, tablets, and desktops.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon"><i class="bi bi-grid-1x2"></i></div>
+                <h3>Component Library</h3>
+                <p>Pre-built hero sections, bento grids, pricing cards, CTAs, and more.</p>
+            </div>
+            <div class="bento-card large">
+                <div class="bento-icon"><i class="bi bi-gear"></i></div>
+                <h3>Easy Configuration</h3>
+                <p>Simple YAML-based configuration for navigation, footer links, social icons, and site settings. No complex setup required.</p>
+            </div>
+            <div class="bento-card">
+                <div class="bento-icon"><i class="bi bi-github"></i></div>
+                <h3>GitHub Pages Ready</h3>
+                <p>Works seamlessly as a remote theme. Just add one line to your config.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-gray" id="quickstart">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-number">Quick Start</span>
+            <h2 class="section-title">Up and running in minutes</h2>
+            <p class="section-desc" style="margin: 0 auto;">Get started with just a few lines of configuration.</p>
+        </div>
+        
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Add the Theme</h3>
+                <p>Add <code>remote_theme: devuri/ceres-theme</code> to your _config.yml file.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Configure</h3>
+                <p>Set up your site title, navigation, footer links, and social icons.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Build</h3>
+                <p>Create pages using the provided layouts and components. Push to GitHub.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="components">
+    <div class="container">
+        <div class="text-center">
+            <span class="section-number">Components</span>
+            <h2 class="section-title">Pre-built components</h2>
+            <p class="section-desc" style="margin: 0 auto;">Everything you need to build professional landing pages.</p>
+        </div>
+        
+        <div class="use-cases-grid">
+            <div class="use-case-card">
+                <div class="use-case-icon"><i class="bi bi-star"></i></div>
+                <div>
+                    <h3>Hero Sections</h3>
+                    <p>Eye-catching hero sections with gradient text, stats, and call-to-action buttons.</p>
+                </div>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon"><i class="bi bi-grid-3x3-gap"></i></div>
+                <div>
+                    <h3>Bento Grids</h3>
+                    <p>Flexible card grids for showcasing features with icons and descriptions.</p>
+                </div>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon"><i class="bi bi-currency-dollar"></i></div>
+                <div>
+                    <h3>Pricing Tables</h3>
+                    <p>Beautiful pricing cards with feature lists and highlighted plans.</p>
+                </div>
+            </div>
+            <div class="use-case-card">
+                <div class="use-case-icon"><i class="bi bi-list-ol"></i></div>
+                <div>
+                    <h3>Steps & Processes</h3>
+                    <p>Numbered step cards for explaining workflows and processes.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{{ '/components/' | relative_url }}" class="btn btn-ghost btn-lg">View All Components</a>
+        </div>
+    </div>
+</section>
+
+{% include cta.html
+   title="Ready to get started?"
+   description="Start building your site with Ceres Theme today."
+   cta_primary="Read the Docs"
+   cta_primary_url="/getting-started"
+   cta_secondary="View on GitHub"
+   cta_secondary_url="https://github.com/devuri/ceres-theme"
+%}
